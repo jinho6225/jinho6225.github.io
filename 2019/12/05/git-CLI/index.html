@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="#git-CLI
+git CLI (command line interface)
+version control
+branch &amp;amp; conflict
+backup
+collaboration
+
+
+
+- git init
+    initiate version control for th"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jinho Myung"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="git-CLI"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="#git-CLI
+git CLI (command line interface)
+version control
+branch &amp;amp; conflict
+backup
+collaboration
+
+
+
+- git init
+    initiate version control for th"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Jinho&#39;s blog"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://jinho6225.github.iohttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://jinho6225.github.iohttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>git-CLI - Jinho&#39;s blog</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Configurable Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="noopener">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>git-CLI</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-12-05
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/git/">#git</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/etc/">etc</a>
+
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="git-CLI"><a href="#git-CLI" class="headerlink" title="#git-CLI"></a>#git-CLI</h2><ul>
+<li>git CLI (command line interface)<ol>
+<li>version control</li>
+<li>branch &amp; conflict</li>
+<li>backup</li>
+<li>collaboration</li>
+</ol>
+</li>
+</ul>
+<pre><code>- git init
+    initiate version control for this folder
+    folder was created which named &lt;.git&gt;
+    if you delete ths folder, it will mess up
+
+- nano hello1.txt
+- cat hello1.txt
+    this command &lt;cat&gt; could print out the content of that file to the command line
+- git status
+    working tree status
+
+- git add hello1.txt
+    add to staging area
+
+- git commit -m ‘Message 1’
+    create version
+
+- git log
+    show version
+
+- git log —stat
+    show version if more than one file&apos;s committed
+
+- git diff
+    show changes
+
+- git checkout -- .
+    restore changed content
+
+- git reset —hard
+    it will be returned back last version
+
+- git log -p
+    change will be shown by commit
+
+- git checkout [commit id]
+    will be back to commit id&apos;s time
+    we could go back when we want to commit id&apos;s time
+    this is just back. last commit id&apos;s still exist
+- git checkout master
+    we could go back. last commit id&apos;s time
+
+
+- git add .
+    all files of this folder are added
+
+- git commit -am ‘name of commit’
+    we could add and commit at a time
+
+- git commit
+    if just enter without &lt;-m&gt;, we will be get into default editor and we could write down several lines
+
+- git config —global core.editor “vim’ or ‘nano’
+    we could set up default editor as like above
+
+- git reset —hard [Mess2 commit id]
+    if we have total 3 commits, it will be deleted Mess3 and will be moved to Mess2
+
+- git reset —help
+    help command
+
+- git revert [Mess4 commit id]
+    if we have total 4 commits and we want to come back to Mess3, we need Mess4&apos;s commit id
+    then, it will be re-directed to default editor
+    so, total commit will be 5 and commit Mess 5 will be same as Mess3
+
+- .gitignore
+    we could make this file and write down file name into this file if you do not want to git ignore
+
+
+- git log —all —graph —oneline
+    it will show all logs as like graph? tree?</code></pre><br>
+
+<ul>
+<li><p>git branch &amp; conflict</p>
+<pre><code>- git branch
+    master
+
+- git branch [branch name]
+    git branch apple
+
+- git branch
+    master &amp; apple [branch name which i made it]
+
+- git branch [branch name]
+    git branch google
+
+- git branch [branch name]
+    git branch ms</code></pre><ul>
+<li>if we change master contents and commit, head will be pointed to master.<pre><code>- git checkout apple
+    head will be pointed to apple and changed content for master will be disappeared
+    because of head changed to point out to</code></pre></li>
+</ul>
+</li>
+</ul>
+<pre><code>- git branch
+    we could see list of branch
+
+- git checkout [branch name]
+    we could change git branch</code></pre><ul>
+<li>merge<ul>
+<li>base</li>
+<li>merge commit</li>
+</ul>
+</li>
+</ul>
+<pre><code>- git commit —amend
+   if want to amend after commit
+
+if i want to merge with whateve branch, we could merge it using command merge
+in order to merge, head must be pointed to base branch(master)
+that&apos;s why we should use checkout first (in order to head change to point to)</code></pre><ul>
+<li>conflict<pre><code>if there is conflict, we could check throughout editor and change it (add &amp; commit again).</code></pre></li>
+</ul>
+<br>
+
+
+<ul>
+<li><p>backup</p>
+<pre><code>local repository
+remote repository
+
+push - clone - pull
+
+GitHub, GitLab
+
+git remote add origin(this name could be changed) [repository web address]
+git push origin
+
+git remote
+git remove -v (we could check repository web address)
+
+git clone [repository web address] [if you have folder name, you could write down here (this is optional)]
+
+pull
+git pull</code></pre></li>
+</ul>
+<br>
+<hr>
+
+<pre><code>커밋 메세지 수정
+git commit --amend // 마지막 커밋메세지 수정(ref)
+
+간단한 commit방법
+git add {변경한 파일병}
+
+        옵션(인라인 메세지)
+git commit -m “커밋 메세지 작성&quot;
+    [명령어(커밋)]  [입력값(커밋 메세지)]
+
+git push    origin    master    --force
+    [명령어] [입력값]    [입력값]     [옵션]
+    (푸시) (저장소 이름) (대상 브랜치) (강제로 하기)
+
+git remote  add  origin         저장소주소
+    [명령어][명령어] [인자1]        [인자2]
+    (리모트) (추가) (리모트저장소 이름)(저장소 주소)
+
+커밋 이력 확인
+git log // 모든 커밋로그 확인
+git log -3 // 최근 3개 커밋로그 확인
+git log --pretty=oneline // 각 커밋을 한 줄로 표시
+
+커밋 취소
+git reset HEAD^ // 마지막 커밋 삭제
+git reset --hard HEAD // 마지막 커밋 상태로 되돌림
+git reset HEAD * // 스테이징을 언스테이징으로 변경, ref
+
+기타
+파일 삭제
+git rm --cached --ignore-unmatch [삭제할 파일명]
+
+히스토리 삭제
+목적: 패스워드, 아이디 같은 비공개 정보가 담긴 파일을 실수로 올렸을 때 삭제하는 방법이다. (history에서도 해당 파일만 삭제)
+git clone [url] # 소스 다운로드
+cd [foler_name] # 해당 폴더 이동
+git filter-branch --index-filter &apos;git rm --cached --ignore-unmatch [삭제할 파일명]&apos; --prune-empty -- --all # 모든 히스토리에서 해당 파일 삭제
+git push origin master --force # 서버로 전송
+
+히스토리에서 폴더 삭제:
+git filter-branch --tree-filter &apos;rm -rf vendor/gems&apos; HEAD
+
+리모트 주소 추가하여 로컬에 싱크하기
+git remote add upstream {리모트 주소}
+git pull upstream {브랜치명}</code></pre><br>
+<hr>
+
+<h1 id="Git-자주-사용하는-명령어-정리"><a href="#Git-자주-사용하는-명령어-정리" class="headerlink" title="Git 자주 사용하는 명령어 정리"></a>Git 자주 사용하는 명령어 정리</h1><p>자주 사용하는 기본적인 명령어들을 정리했습니다.</p>
+<ul>
+<li>최근 수정일 : 2019-12-05</li>
+</ul>
+<h2 id="저장소-생성-초기화-하기"><a href="#저장소-생성-초기화-하기" class="headerlink" title="저장소 생성(초기화) 하기"></a>저장소 생성(초기화) 하기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init  <span class="comment"># 저장소 생성</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="커밋하기"><a href="#커밋하기" class="headerlink" title="커밋하기"></a>커밋하기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add README.md <span class="comment"># 커밋할 파일 추가</span></span><br><span class="line">git status <span class="comment"># 현재 스테이지 상태를 확인</span></span><br><span class="line">git commit -m <span class="string">"init: README.md"</span> <span class="comment"># 인라인 커밋 메세지 작성</span></span><br><span class="line">git <span class="built_in">log</span> --decorate=full --oneline --graph <span class="comment"># 커밋 로그 확인</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="브랜치-생성하기"><a href="#브랜치-생성하기" class="headerlink" title="브랜치 생성하기"></a>브랜치 생성하기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b readme <span class="comment"># readme 라는 이름의 브랜치를 생성한 후, 생성된 브랜치로 체크아웃</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="머지하기"><a href="#머지하기" class="headerlink" title="머지하기"></a>머지하기</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge readme --no-ff <span class="comment"># readme 브랜치의 내용을 가져와서 머지함, fast-forward 기능 끄기</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="restore"><a href="#restore" class="headerlink" title="restore"></a>restore</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- . <span class="comment"># save한 내용이 되돌려짐</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="LICENSE"><a href="#LICENSE" class="headerlink" title="LICENSE"></a>LICENSE</h1><p>이 저장소는 WTFPL 라이선스에 의해 보호를 받습니다.</p>
+<h2 id="8-알아두면-좋을-팁"><a href="#8-알아두면-좋을-팁" class="headerlink" title="8. 알아두면 좋을 팁"></a>8. 알아두면 좋을 팁</h2><ul>
+<li>awesome-series</li>
+<li>.gitconfig</li>
+<li>스스로 문제를 해결하는 법</li>
+<li>도움을 요청하는 법</li>
+</ul>
+<h2 id="9-Thanks-to"><a href="#9-Thanks-to" class="headerlink" title="9. Thanks to.."></a>9. Thanks to..</h2><ul>
+<li><a href="https://github.com/jinho6225" target="_blank" rel="noopener">@jinho6225</a></li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 Jinho Myung<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
