@@ -11,8 +11,7 @@
   -o-background-size: cover;
 }
 .serif,
-body,
-.intro-header .post-heading .meta {
+body {
   font-family: 'Lora', 'Times New Roman', serif;
 }
 .sans-serif,
@@ -22,10 +21,13 @@ h3,
 h4,
 h5,
 h6,
+.fa-stack-1x,
+.fa-stack-2x,
 .navbar-custom,
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading,
 .intro-header .post-heading .subheading,
+.intro-header .post-heading .meta,
 .btn,
 .pager li > a,
 .pager li > span {
@@ -49,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 750;
 }
 a {
   color: #404040;
@@ -63,15 +65,13 @@ a img:focus {
   cursor: zoom-in;
 }
 hr.small {
-  max-width: 100px;
+  max-width: 200px;
   margin: 15px auto;
-  border-width: 4px;
+  border-width: 3px;
   border-color: #fff;
 }
 .fa-stack-1x,
-.fa-stack-2x {
-  bottom: 0;
-}
+.fa-stack-2x,
 .navbar-custom {
   position: absolute;
   top: 0;
@@ -79,39 +79,59 @@ hr.small {
   width: 100%;
   z-index: 3;
 }
+.fa-stack-1x .navbar-brand,
+.fa-stack-2x .navbar-brand,
 .navbar-custom .navbar-brand {
   font-weight: 800;
 }
+.fa-stack-1x .nav li a,
+.fa-stack-2x .nav li a,
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 1px;
   text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
+  .fa-stack-1x,
+  .fa-stack-2x,
   .navbar-custom {
     background: transparent;
     border-bottom: 1px solid transparent;
   }
+  .fa-stack-1x .navbar-brand,
+  .fa-stack-2x .navbar-brand,
   .navbar-custom .navbar-brand {
     color: #fff;
     padding: 20px;
   }
+  .fa-stack-1x .navbar-brand:hover,
+  .fa-stack-2x .navbar-brand:hover,
   .navbar-custom .navbar-brand:hover,
+  .fa-stack-1x .navbar-brand:focus,
+  .fa-stack-2x .navbar-brand:focus,
   .navbar-custom .navbar-brand:focus {
     color: rgba(255,255,255,0.8);
   }
+  .fa-stack-1x .nav li a,
+  .fa-stack-2x .nav li a,
   .navbar-custom .nav li a {
     color: #fff;
     padding: 20px;
   }
+  .fa-stack-1x .nav li a:hover,
+  .fa-stack-2x .nav li a:hover,
   .navbar-custom .nav li a:hover,
+  .fa-stack-1x .nav li a:focus,
+  .fa-stack-2x .nav li a:focus,
   .navbar-custom .nav li a:focus {
     color: rgba(255,255,255,0.8);
   }
 }
 @media only screen and (min-width: 1170px) {
+  .fa-stack-1x,
+  .fa-stack-2x,
   .navbar-custom {
     -webkit-transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;
@@ -124,6 +144,8 @@ hr.small {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
+  .fa-stack-1x.is-fixed,
+  .fa-stack-2x.is-fixed,
   .navbar-custom.is-fixed {
 /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
@@ -134,20 +156,34 @@ hr.small {
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
   }
+  .fa-stack-1x.is-fixed .navbar-brand,
+  .fa-stack-2x.is-fixed .navbar-brand,
   .navbar-custom.is-fixed .navbar-brand {
     color: #404040;
   }
+  .fa-stack-1x.is-fixed .navbar-brand:hover,
+  .fa-stack-2x.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:hover,
+  .fa-stack-1x.is-fixed .navbar-brand:focus,
+  .fa-stack-2x.is-fixed .navbar-brand:focus,
   .navbar-custom.is-fixed .navbar-brand:focus {
     color: #0085a1;
   }
+  .fa-stack-1x.is-fixed .nav li a,
+  .fa-stack-2x.is-fixed .nav li a,
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
+  .fa-stack-1x.is-fixed .nav li a:hover,
+  .fa-stack-2x.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:hover,
+  .fa-stack-1x.is-fixed .nav li a:focus,
+  .fa-stack-2x.is-fixed .nav li a:focus,
   .navbar-custom.is-fixed .nav li a:focus {
     color: #0085a1;
   }
+  .fa-stack-1x.is-visible,
+  .fa-stack-2x.is-visible,
   .navbar-custom.is-visible {
 /* if the user changes the scrolling direction, we show the header */
     -webkit-transform: translate3d(0, 100%, 0);
@@ -193,10 +229,10 @@ hr.small {
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  font-size: 24px;
+  font-size: 23px;
   line-height: 1.1;
   display: block;
-  font-weight: 300;
+  font-weight: 550;
   margin: 10px 0 0;
 }
 @media only screen and (min-width: 768px) {
@@ -216,19 +252,20 @@ hr.small {
 .intro-header .post-heading .subheading {
   font-size: 24px;
   margin: 10px 0 30px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .intro-header .post-heading .meta {
-  font-style: italic;
-  font-weight: 300;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: center;
 }
 .intro-header .post-heading .meta a {
   color: #fff;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 55px;
+    font-size: 60px;
+    text-align: center;
   }
   .intro-header .post-heading .subheading {
     font-size: 30px;
@@ -243,22 +280,21 @@ hr.small {
   color: #0085a1;
 }
 .post-preview > a > .post-title {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 .post-preview > a > .post-title.archive {
-  font-size: 22px;
+  font-size: 20px;
 }
 .post-preview > a > .post-subtitle {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 18px;
-  font-style: italic;
+  font-size: 16px;
   margin-top: 0;
 }
 .post-preview > .post-meta.archive {
@@ -275,7 +311,7 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 36px;
+    font-size: 20px;
   }
 }
 .section-heading {
@@ -325,7 +361,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-size: 14px;
+  font-size: 10px;
   text-align: center;
   margin-bottom: 0;
 }
