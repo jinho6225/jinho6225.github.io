@@ -15,19 +15,12 @@
     
         <meta name="description" content="#TIL - Today I Learned
 seniore session
-node-module-system
-node-require
-node-fs-readfile
-node-fs-writefile
-node-notes-cli
-
-
-
-
-
-
-what i study myself
-coo"/>
+array-manipulation-3 *
+string-manipulation-3 *
+npm-intro
+express-intro
+express-hello-world
+working-with-collect"/>
     
 
     <!--Author-->
@@ -44,19 +37,12 @@ coo"/>
     
         <meta property="og:description" content="#TIL - Today I Learned
 seniore session
-node-module-system
-node-require
-node-fs-readfile
-node-fs-writefile
-node-notes-cli
-
-
-
-
-
-
-what i study myself
-coo"/>
+array-manipulation-3 *
+string-manipulation-3 *
+npm-intro
+express-intro
+express-hello-world
+working-with-collect"/>
     
 
     <!--Open Graph Site Name-->
@@ -246,11 +232,18 @@ coo"/>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <h1 id="TIL-Today-I-Learned"><a href="#TIL-Today-I-Learned" class="headerlink" title="#TIL - Today I Learned"></a>#TIL - Today I Learned</h1><ul>
 <li>seniore session<ol>
-<li>node-module-system</li>
-<li>node-require</li>
-<li>node-fs-readfile</li>
-<li>node-fs-writefile</li>
-<li>node-notes-cli</li>
+<li>array-manipulation-3 *</li>
+<li>string-manipulation-3 *</li>
+<li>npm-intro</li>
+<li>express-intro</li>
+<li>express-hello-world</li>
+<li>working-with-collections *</li>
+<li>express-sendfile</li>
+<li>express-static</li>
+<li>express-get-json</li>
+<li>express-post-json</li>
+<li>express-delete</li>
+<li>express-notes-api</li>
 </ol>
 </li>
 </ul>
@@ -258,22 +251,12 @@ coo"/>
 <hr>
 
 <h3 id="what-i-study-myself"><a href="#what-i-study-myself" class="headerlink" title="what i study myself"></a>what i study myself</h3><ul>
-<li><p>cookie lecture by opentutorials</p>
-<ul>
-<li><p>set up the cookie</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">http.createServer((req, res) &#x3D;&gt; &#123;</span><br><span class="line">  res.writeHead(200, &#123;</span><br><span class="line">	&#39;Set-Cookie&#39;: [&#39;1&#x3D;Jinho&#39;, &#39;2&#x3D;Dae&#39;, &#39;3&#x3D;Steve&#39;]</span><br><span class="line">  &#125;)</span><br><span class="line">  res.end(&#39;Cookie!!&#39;);</span><br><span class="line">&#125;).listen(port, () &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#96;Server running at $&#123;port&#125;&#96;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li><p>we can check and remove cookies on dev tool - application - cookies</p>
-</li>
-<li><p>we can read cookies (npm install cookie)    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const cookie &#x3D; require(&#39;cookie&#39;);</span><br><span class="line"></span><br><span class="line">http.createServer((req, res) &#x3D;&gt; &#123;</span><br><span class="line">  let cookies</span><br><span class="line">  if (req.headers.cookie !&#x3D;&#x3D; undefined) &#123;</span><br><span class="line">	cookies &#x3D; cookie.parse(req.headers.cookie);</span><br><span class="line">  &#125;</span><br><span class="line">  &#x2F;&#x2F; res.writeHead(200, &#123;</span><br><span class="line">  &#x2F;&#x2F;   &#39;Set-Cookie&#39;: [&#39;1&#x3D;Jinho&#39;, &#39;2&#x3D;Dae&#39;, &#39;3&#x3D;Steve&#39;]</span><br><span class="line">  &#x2F;&#x2F; &#125;)</span><br><span class="line">  res.end(&#39;Cookie!!&#39;);</span><br><span class="line">&#125;).listen(port, () &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#96;Server running at $&#123;port&#125;&#96;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<li>work on react practice </li>
+</ul>
 <br>
 <hr>
 
 
-</li>
-</ul>
-</li>
-</ul>
 
 
                 
