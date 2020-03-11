@@ -333,7 +333,27 @@ console.log(Object.keys(myObj)); // console: [&apos;foo&apos;]</code></pre><ul>
 <li><p>we could generate same feature with Object.assign</p>
 </li>
 </ul>
-</li>
+<h3 id="Array-destructuring"><a href="#Array-destructuring" class="headerlink" title="Array destructuring"></a>Array destructuring</h3><pre><code>const arr = [1, 2, 3]
+const [one, two, three] = arr // 기본 destructuring
+
+console.log(one)   // 1
+console.log(two)   // 2
+console.log(three) // 3
+
+const arr2 = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;, &apos;f&apos;]
+const [a, b, c, ...rest] = arr2 // ...을 이용해서 나머지를 모두 배열 몰아넣습니다.
+
+console.log(a)     // &apos;a&apos;
+console.log(b)     // &apos;b&apos;
+console.log(c)     // &apos;c&apos;
+console.log(rest)  // [&apos;d&apos;, &apos;e&apos;, &apos;f&apos;]
+
+const arr3 = [&apos;z&apos;, &apos;y&apos;, &apos;x&apos;]
+const [x, y, z] = arr3 // 배열은 무조건 순서대로 할당됩니다.
+
+console.log(x) // &apos;z&apos;
+console.log(y) // &apos;y&apos;
+console.log(z) // &apos;x&apos;</code></pre></li>
 </ul>
 
 
