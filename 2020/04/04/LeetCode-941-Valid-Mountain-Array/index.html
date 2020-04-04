@@ -13,6 +13,11 @@
     
 
     
+        <meta name="description" content="problem below
+Valid Mountain Array
+Given an array A of integers, return true if and only if it is a valid mountain array.
+Recall that A is a mountain "/>
+    
 
     <!--Author-->
     
@@ -21,10 +26,15 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jinho&#39;s blog"/>
+        <meta property="og:title" content="LeetCode-941. Valid Mountain Array "/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="problem below
+Valid Mountain Array
+Given an array A of integers, return true if and only if it is a valid mountain array.
+Recall that A is a mountain "/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +42,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +61,7 @@
 
     <!-- Title -->
     
-    <title>LeetCode - Jinho&#39;s blog</title>
+    <title>LeetCode-941. Valid Mountain Array  - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -157,257 +167,114 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/rayi.jpg')">
+<header class="intro-header" style="background-image: url('/img/macbook.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>LeetCode</h1>
+                <div class="post-heading">
+                    <h1>LeetCode-941. Valid Mountain Array </h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-04-04
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/04/04/LeetCode-941-Valid-Mountain-Array/">
-        <h1 class="post-title archive">
-            LeetCode-941. Valid Mountain Array 
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-04
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/04/04/LeetCode-53-Maximum-Subarray/">
-        <h1 class="post-title archive">
-            LeetCode-53. Maximum Subarray 
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-04
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="941">
+<li><p>Valid Mountain Array</p>
+<pre><code>Given an array A of integers, return true if and only if it is a valid mountain array.
+Recall that A is a mountain array if and only if:
+
+A.length &gt;= 3
+There exists some i with 0 &lt; i &lt; A.length - 1 such that:
+A[0] &lt; A[1] &lt; ... A[i-1] &lt; A[i]
+A[i] &gt; A[i+1] &gt; ... &gt; A[A.length - 1]
+
+Example 1:
+Input: [2,1]
+Output: false
+
+Example 2:
+Input: [3,5,5]
+Output: false
+
+Example 3:
+Input: [0,3,2,1]
+Output: true
+
+Note:
+0 &lt;= A.length &lt;= 10000
+0 &lt;= A[i] &lt;= 10000</code></pre></li>
+</ol>
+<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> validMountainArray = <span class="function"><span class="keyword">function</span> (<span class="params">A</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (A.length &lt;= <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (A[i] === A[i + <span class="number">1</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> bigNum = <span class="built_in">Math</span>.max(...A);</span><br><span class="line">  <span class="keyword">const</span> bigNumIndex = A.indexOf(bigNum);</span><br><span class="line">  <span class="keyword">if</span> (A[bigNumIndex] === A[A.length - <span class="number">1</span>] || A[bigNumIndex] === A[<span class="number">0</span>]) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; bigNumIndex; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (A[i] &gt; A[i + <span class="number">1</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = bigNumIndex; i &lt; A.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (A[i] &lt; A[i + <span class="number">1</span>]) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2020/04/02/LeetCode-202-Happy-Number/">
-        <h1 class="post-title archive">
-            LeetCode-202-Happy-Number
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-02
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/04/02/LeetCode-136-Single-Number/">
-        <h1 class="post-title archive">
-            LeetCode-136-Single-Number
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-02
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/03/11/LeetCode-1365-How-Many-Numbers-Are-Smaller-Than-the-Current-Number/">
-        <h1 class="post-title archive">
-            LeetCode-1365. How Many Numbers Are Smaller Than the Current Number 
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-03-11
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/03/10/LeetCode-1342-Number-of-Steps-to-Reduce-a-Number-to-Zero/">
-        <h1 class="post-title archive">
-            LeetCode-1342. Number of Steps to Reduce a Number to Zero
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-03-10
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/22/LeetCode-917-Reverse-Only-Letters/">
-        <h1 class="post-title archive">
-            LeetCode-917. Reverse Only Letters
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-22
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/25/LeetCode-414-Third-Maximum-Number/">
-        <h1 class="post-title archive">
-            LeetCode - 414. Third Maximum Number
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-25
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/16/LeetCode-1221-Split-a-String-in-Balanced-Strings/">
-        <h1 class="post-title archive">
-            LeetCode - 1221. Split a String in Balanced Strings
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-16
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/15/LeetCode-1313-Decompress-Run-Length-Encoded-List/">
-        <h1 class="post-title archive">
-            LeetCode - 1313. Decompress Run-Length Encoded List
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-15
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/10/LeetCode-1295-Find-Numbers-with-Even-Number-of-Digits/">
-        <h1 class="post-title archive">
-            LeetCode - 1295. Find Numbers with Even Number of Digits 
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-10
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/09/LeetCode-1282-Group-the-People-Given-the-Group-Size-They-Belong-To/">
-        <h1 class="post-title archive">
-            LeetCode - 1282. Group the People Given the Group Size They Belong To
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-09
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/08/LeetCode-1281-Subtract-the-Product-and-Sum-of-Digits-of-an-Integer/">
-        <h1 class="post-title archive">
-            LeetCode - 1281. Subtract the Product and Sum of Digits of an Integer
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/07/LeetCode-1108-Defanging-an-IP-Address/">
-        <h1 class="post-title archive">
-            LeetCode - 1108. Defanging an IP Address
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/06/LeetCode-807-Max-Increase-to-Keep-City-Skyline/">
-        <h1 class="post-title archive">
-            LeetCode - 807. Max Increase to Keep City Skyline
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-06
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/05/LeetCode-771-Jewels-and-Stones/">
-        <h1 class="post-title archive">
-            LeetCode - 771.Jewels and Stones
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/04/LeetCode-344-Reverse-String/">
-        <h1 class="post-title archive">
-            LeetCode - 344.Reverse String
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-04
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -495,7 +362,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
