@@ -13,6 +13,11 @@
     
 
     
+        <meta name="description" content="problem below
+Middle of the Linked List
+Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are t"/>
+    
 
     <!--Author-->
     
@@ -21,10 +26,15 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jinho&#39;s blog"/>
+        <meta property="og:title" content="LeetCode-876. Middle of the Linked List"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="problem below
+Middle of the Linked List
+Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are t"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +42,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +61,7 @@
 
     <!-- Title -->
     
-    <title>page - leetcode - Jinho&#39;s blog</title>
+    <title>LeetCode-876. Middle of the Linked List - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -157,77 +167,103 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/rayi.jpg')">
+<header class="intro-header" style="background-image: url('/img/macbook.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#leetcode</h1>
+                <div class="post-heading">
+                    <h1>LeetCode-876. Middle of the Linked List</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-04-08
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/01/05/LeetCode-771-Jewels-and-Stones/">
-        <h1 class="post-title archive">
-            LeetCode - 771.Jewels and Stones
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-05
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/01/04/LeetCode-344-Reverse-String/">
-        <h1 class="post-title archive">
-            LeetCode - 344.Reverse String
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-04
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="876">
+<li><p>Middle of the Linked List</p>
+<pre><code>Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+If there are two middle nodes, return the second middle node.
+
+Example 1:
+Input: [1,2,3,4,5]
+Output: Node 3 from this list (Serialization: [3,4,5])
+The returned node has value 3.  (The judge&apos;s serialization of this node is [3,4,5]).
+Note that we returned a ListNode object ans, such that:
+ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.
+Example 2:
+Input: [1,2,3,4,5,6]
+Output: Node 4 from this list (Serialization: [4,5,6])
+Since the list has two middle nodes with values 3 and 4, we return the second one.
+
+Note:
+The number of nodes in the given list will be between 1 and 100.</code></pre></li>
+</ol>
+<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line"> * Definition <span class="keyword">for</span> singly-linked list.</span><br><span class="line"> * <span class="function"><span class="keyword">function</span> <span class="title">ListNode</span>(<span class="params">val</span>) </span>&#123;</span><br><span class="line"> *     <span class="keyword">this</span>.val = val;</span><br><span class="line"> *     <span class="keyword">this</span>.next = <span class="literal">null</span>;</span><br><span class="line"> * &#125;</span><br><span class="line"> *<span class="regexp">/</span></span><br><span class="line"><span class="regexp">/</span>*</span><br><span class="line"> * @param &#123;ListNode&#125; head</span><br><span class="line"> * @<span class="keyword">return</span> &#123;ListNode&#125;</span><br><span class="line"> *<span class="regexp">/</span></span><br><span class="line"><span class="regexp">var middleNode = function (head) &#123;</span></span><br><span class="line"><span class="regexp">  let count = 1;</span></span><br><span class="line"><span class="regexp">  let node = head;</span></span><br><span class="line"><span class="regexp">  while (node.next !== null) &#123;</span></span><br><span class="line"><span class="regexp">    node = node.next;</span></span><br><span class="line"><span class="regexp">    count++;</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">  count = Math.floor(count /</span> <span class="number">2</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(count);</span><br><span class="line">  <span class="keyword">while</span> (count !== <span class="number">0</span>) &#123;</span><br><span class="line">    head = head.next;</span><br><span class="line">    count--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> head;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/11/30/Maximum-Subarray/">
-        <h1 class="post-title archive">
-            Maximum-Subarray
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-30
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/tags/leetcode/">&larr;  Newer Posts</a></li>
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -315,7 +351,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
