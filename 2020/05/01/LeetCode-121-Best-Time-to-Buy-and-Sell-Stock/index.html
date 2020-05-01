@@ -13,7 +13,11 @@
     
 
     
-        <meta name="description" content="ArrayArrayThe most basic of all data structures.Each array has a fixed number of cells decided on its creation, and each cell has a corresponding nume"/>
+        <meta name="description" content="thought process
+problem below
+Best Time to Buy and Sell Stock
+Say you have an array for which the ith element is the price of a given stock on day i.
+"/>
     
 
     <!--Author-->
@@ -23,12 +27,16 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Data-structures-array"/>
+        <meta property="og:title" content="LeetCode-121. Best Time to Buy and Sell Stock"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="ArrayArrayThe most basic of all data structures.Each array has a fixed number of cells decided on its creation, and each cell has a corresponding nume"/>
+        <meta property="og:description" content="thought process
+problem below
+Best Time to Buy and Sell Stock
+Say you have an array for which the ith element is the price of a given stock on day i.
+"/>
     
 
     <!--Open Graph Site Name-->
@@ -55,7 +63,7 @@
 
     <!-- Title -->
     
-    <title>Data-structures-array - Jinho&#39;s blog</title>
+    <title>LeetCode-121. Best Time to Buy and Sell Stock - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -169,13 +177,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Data-structures-array</h1>
+                    <h1>LeetCode-121. Best Time to Buy and Sell Stock</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2020-04-27
+                            2020-05-01
                         
                     </span>
                 </div>
@@ -196,7 +204,7 @@
                         
 
 
-<a href="/tags/data-structures/">#data-structures</a> <a href="/tags/array/">#array</a>
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a> <a href="/tags/DP/">#DP</a> <a href="/tags/dynamic-programming/">#dynamic-programming</a>
 
 
                     
@@ -205,7 +213,7 @@
                     
                         
 
-<a href="/categories/Data-structures/">Data-structures</a>
+<a href="/categories/LeetCode/">LeetCode</a>
 
                     
                 </div>
@@ -216,30 +224,28 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h1><p>Array<br>The most basic of all data structures.<br>Each array has a fixed number of cells decided on its creation, and each cell has a corresponding numeric index used to select its data. </p>
-<ul>
-<li><p>Advantages</p>
-<ul>
-<li>Simple to create and use.</li>
-<li>Foundational building block for complex data structures</li>
-</ul>
-</li>
-<li><p>Disadvantages</p>
-<ul>
-<li>Fixed size</li>
-<li>Expensive to insert/delete or resequence values</li>
-<li>Inefficient to sort</li>
-</ul>
-</li>
-</ul>
-<p>push - O(1)<br>pop - O(1)<br>deleteAtIndex - O(n)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyArray</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.length = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.data = &#123;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  push(item) &#123;</span><br><span class="line">    <span class="keyword">this</span>.data[<span class="keyword">this</span>.length] = item;</span><br><span class="line">    <span class="keyword">this</span>.length++;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.length;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  pop() &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> lastItem = <span class="keyword">this</span>.data[<span class="keyword">this</span>.length - <span class="number">1</span>];</span><br><span class="line">      <span class="keyword">delete</span> <span class="keyword">this</span>.data[<span class="keyword">this</span>.length - <span class="number">1</span>];</span><br><span class="line">      <span class="keyword">this</span>.length--;</span><br><span class="line">      <span class="keyword">return</span> lastItem;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(<span class="string">'array is empty now'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  deleteAtIndex(idx) &#123;</span><br><span class="line">    <span class="keyword">let</span> item = <span class="keyword">this</span>.data[idx];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = idx; i &lt; <span class="keyword">this</span>.length; i++) &#123;</span><br><span class="line">      <span class="keyword">this</span>.data[i] = <span class="keyword">this</span>.data[i + <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">delete</span> <span class="keyword">this</span>.data[<span class="keyword">this</span>.length - <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">this</span>.length--;</span><br><span class="line">    <span class="keyword">return</span> item;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myArray = <span class="keyword">new</span> MyArray();</span><br><span class="line"></span><br><span class="line">myArray.push(<span class="string">'!!??!!'</span>);</span><br><span class="line">myArray.push(<span class="string">'hello'</span>);</span><br><span class="line">myArray.push(<span class="string">'world'</span>);</span><br><span class="line">myArray.push(<span class="string">'!'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray.deleteAtIndex(<span class="number">1</span>));</span><br><span class="line">myArray.deleteAtIndex(<span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(myArray);</span><br></pre></td></tr></table></figure>
+                <h2 id="thought-process"><a href="#thought-process" class="headerlink" title="thought process"></a>thought process</h2><p><img src="/img/leetcode-121.jpg" alt="approch"></p>
+<h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="121">
+<li><p>Best Time to Buy and Sell Stock</p>
+<pre><code>Say you have an array for which the ith element is the price of a given stock on day i.
+If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.
+Note that you cannot sell a stock before you buy one.
 
-<br>
-<hr>
-
-
-
+Example 1:
+Input: [7,1,5,3,6,4]
+Output: 5
+Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+             Not 7-1 = 6, as selling price needs to be larger than buying price.
+Example 2:
+Input: [7,6,4,3,1]
+Output: 0
+Explanation: In this case, no transaction is done, i.e. max profit = 0.</code></pre></li>
+</ol>
+<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><p>O(n)</p>
+<p><img src="/img/leetcode-121-O(n).png" alt="O(n) solution"></p>
+<p>O(n^2)</p>
+<p>![O(n ^ 2) solution](/img/leetcode-121-O(n pow 2).png)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; prices</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Runtime: 56 ms, faster than 85.26% of JavaScript online submissions for Best Time to Buy and Sell Stock.</span></span><br><span class="line"><span class="keyword">var</span> maxProfit = <span class="function"><span class="keyword">function</span> (<span class="params">prices</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (prices.length === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> max = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> diff = <span class="number">0</span>;</span><br><span class="line">  prices.reduce(<span class="function">(<span class="params">acc, cur, idx</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (cur &lt; acc) &#123;</span><br><span class="line">      acc = cur;</span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (cur &gt; acc) &#123;</span><br><span class="line">      diff = cur - acc;</span><br><span class="line">      <span class="keyword">if</span> (diff &gt; max) &#123;</span><br><span class="line">        max = diff;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      acc = cur;</span><br><span class="line">      <span class="keyword">return</span> acc;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Runtime: 312 ms, faster than 18.04% of JavaScript online submissions for Best Time to Buy and Sell Stock.</span></span><br><span class="line"><span class="comment">// O(n^2)</span></span><br><span class="line"><span class="keyword">var</span> maxProfit = <span class="function"><span class="keyword">function</span> (<span class="params">prices</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> profit = <span class="number">0</span>,</span><br><span class="line">    max = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; prices.length; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; prices.length; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (prices[i] &gt; prices[j]) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        profit = prices[j] - prices[i];</span><br><span class="line">        <span class="keyword">if</span> (profit &gt; max) &#123;</span><br><span class="line">          max = profit;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// var input = [7,1,5,3,6,4]</span></span><br><span class="line"><span class="comment">// var input = [7,6,4,3,1]</span></span><br><span class="line"><span class="comment">// var input = [3,2,6,5,0,3]</span></span><br><span class="line"><span class="comment">// var input = [2,4,1]</span></span><br><span class="line"><span class="keyword">var</span> input = [<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line">maxProfit(input);</span><br></pre></td></tr></table></figure>
 
                 
             </div>
