@@ -13,6 +13,11 @@
     
 
     
+        <meta name="description" content="problem below
+Plus One
+Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that"/>
+    
 
     <!--Author-->
     
@@ -21,10 +26,15 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jinho&#39;s blog"/>
+        <meta property="og:title" content="LeetCode-66. Plus One"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="problem below
+Plus One
+Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +42,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +61,7 @@
 
     <!-- Title -->
     
-    <title>page - Archives: 2020 - Jinho&#39;s blog</title>
+    <title>LeetCode-66. Plus One - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -157,300 +167,99 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/rayi.jpg')">
+<header class="intro-header" style="background-image: url('/img/macbook.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2020</h1>
+                <div class="post-heading">
+                    <h1>LeetCode-66. Plus One</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-05-03
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/02/07/Edabit-Broken-Keyboard/">
-        <h1 class="post-title archive">
-            Edabit-Broken Keyboard
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-07
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/02/06/Edabit-Concatenate-to-Form-Target-Array/">
-        <h1 class="post-title archive">
-            Edabit-Concatenate to Form Target Array
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-06
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="66">
+<li><p>Plus One</p>
+<pre><code>Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.
+
+Example 1:
+Input: [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
+Example 2:
+Input: [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.</code></pre></li>
+</ol>
+<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; digits</span></span><br><span class="line"><span class="comment"> * @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> plusOne = <span class="function"><span class="keyword">function</span>(<span class="params">digits</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = digits.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (digits[i] === <span class="number">9</span>) &#123;</span><br><span class="line">        digits[i] = <span class="number">1</span></span><br><span class="line">        digits[digits.length] = <span class="number">0</span></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        digits[i] = digits[i] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (digits[i] === <span class="number">9</span>) &#123;</span><br><span class="line">        digits[i] = <span class="number">0</span></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        digits[i] = digits[i] + <span class="number">1</span></span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> digits</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2020/02/06/TIL-02062020/">
-        <h1 class="post-title archive">
-            TIL-02062020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-06
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/02/05/Edabit-Layers-in-a-Rug/">
-        <h1 class="post-title archive">
-            Edabit-Layers in a Rug
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/05/TIL-02052020/">
-        <h1 class="post-title archive">
-            TIL-02052020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/04/Codewars-Jaden-Casing-Strings/">
-        <h1 class="post-title archive">
-            Codewars - Jaden Casing Strings !
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/04/Codewars-Stop-gninnipS-My-sdroW/">
-        <h1 class="post-title archive">
-            Codewars - Stop gninnipS My sdroW!
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/04/Edabit-combinations/">
-        <h1 class="post-title archive">
-            Edabit-combinations
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/04/TIL-02042020/">
-        <h1 class="post-title archive">
-            TIL-02042020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/04/Edabit-White Spaces Between Lower and Uppercase Letters/">
-        <h1 class="post-title archive">
-            Edabit-How White Spaces Between Lower and Uppercase Letters
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/04/Edabit-How-Many-Days-Between-Two-Dates/">
-        <h1 class="post-title archive">
-            Edabit-How Many Days Between Two Dates
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/03/TIL-02032020/">
-        <h1 class="post-title archive">
-            TIL-02032020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/03/Edabit-Calculate-the-Total-Price-of-Groceries/">
-        <h1 class="post-title archive">
-            Edabit-Calculate the Total Price of Groceries
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/02/Edabit-Length-of-a-Nested-Array/">
-        <h1 class="post-title archive">
-            Edabit-Length of a Nested Array
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-02
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/01/Edabit/">
-        <h1 class="post-title archive">
-            Edabit
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-01
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/01/TIL-01272020-01312020/">
-        <h1 class="post-title archive">
-            TIL-01272020-01312020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-01
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/01/TIL-01252020/">
-        <h1 class="post-title archive">
-            TIL-01252020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-01
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/02/01/TIL-01222020-01242020/">
-        <h1 class="post-title archive">
-            TIL-01222020-01242020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-01
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/30/practice-problems-make-tree/">
-        <h1 class="post-title archive">
-            practice-problems-make tree
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/25/LeetCode-414-Third-Maximum-Number/">
-        <h1 class="post-title archive">
-            LeetCode - 414. Third Maximum Number
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-25
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/archives/2020/page/4/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/archives/2020/page/6/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -538,7 +347,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
