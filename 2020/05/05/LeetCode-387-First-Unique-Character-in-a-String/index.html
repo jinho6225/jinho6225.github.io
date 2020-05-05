@@ -13,20 +13,9 @@
     
 
     
-        <meta name="description" content="TIL - Today I Learned
-React hooks
-
-
-
-
-Solved LeetCode problems
-no. 48 - Rotate Image
-no. 387 - First Unique Character in a String
-
-
-
-
-Solved HackerRan"/>
+        <meta name="description" content="problem below
+First Unique Character in a String
+Given a string, find the first non-repeating character in it and return it&amp;apos;s index. If it doesn&amp;"/>
     
 
     <!--Author-->
@@ -36,25 +25,14 @@ Solved HackerRan"/>
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="TIL 050520"/>
+        <meta property="og:title" content="LeetCode-387. First Unique Character in a String"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="TIL - Today I Learned
-React hooks
-
-
-
-
-Solved LeetCode problems
-no. 48 - Rotate Image
-no. 387 - First Unique Character in a String
-
-
-
-
-Solved HackerRan"/>
+        <meta property="og:description" content="problem below
+First Unique Character in a String
+Given a string, find the first non-repeating character in it and return it&amp;apos;s index. If it doesn&amp;"/>
     
 
     <!--Open Graph Site Name-->
@@ -81,7 +59,7 @@ Solved HackerRan"/>
 
     <!-- Title -->
     
-    <title>TIL 050520 - Jinho&#39;s blog</title>
+    <title>LeetCode-387. First Unique Character in a String - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -195,7 +173,7 @@ Solved HackerRan"/>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>TIL 050520</h1>
+                    <h1>LeetCode-387. First Unique Character in a String</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -222,7 +200,7 @@ Solved HackerRan"/>
                         
 
 
-<a href="/tags/TIL/">#TIL</a> <a href="/tags/Study/">#Study</a> <a href="/tags/Today-I-Learned/">#Today-I-Learned</a>
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
 
 
                     
@@ -231,7 +209,7 @@ Solved HackerRan"/>
                     
                         
 
-<a href="/categories/TIL/">TIL</a>
+<a href="/categories/LeetCode/">LeetCode</a>
 
                     
                 </div>
@@ -242,23 +220,31 @@ Solved HackerRan"/>
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="TIL-Today-I-Learned"><a href="#TIL-Today-I-Learned" class="headerlink" title="TIL - Today I Learned"></a>TIL - Today I Learned</h1><ul>
-<li>React hooks</li>
-</ul>
-<br>
-<hr>
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="387">
+<li><p>First Unique Character in a String</p>
+<pre><code>Given a string, find the first non-repeating character in it and return it&apos;s index. If it doesn&apos;t exist, return -1.
 
-<h3 id="Solved-LeetCode-problems"><a href="#Solved-LeetCode-problems" class="headerlink" title="Solved LeetCode problems"></a>Solved LeetCode problems</h3><ul>
-<li>no. 48 - Rotate Image</li>
-<li>no. 387 - First Unique Character in a String</li>
-</ul>
-<br>
-<hr>
+Examples:
+s = &quot;leetcode&quot;
+return 0.
+s = &quot;loveleetcode&quot;,
+return 2.
+Note: You may assume the string contain only lowercase letters.</code></pre></li>
+</ol>
+<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><blockquote>
+<p>   96ms</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> firstUniqChar = <span class="function"><span class="keyword">function</span> (<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">debugger</span>;</span><br><span class="line">  <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!obj[s[i]]) &#123;</span><br><span class="line">      obj[s[i]] = [];</span><br><span class="line">      obj[s[i]].push(i);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      obj[s[i]].push(i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (obj[i].length === <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> obj[i][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Solved-HackerRank-problems"><a href="#Solved-HackerRank-problems" class="headerlink" title="Solved HackerRank problems"></a>Solved HackerRank problems</h3><ul>
-<li>Day 4: Create a Rectangle Object</li>
-<li>Sock Merchant    </li>
-</ul>
+<blockquote>
+<p>124ms</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var firstUniqChar = function(s) &#123;</span></span><br><span class="line"><span class="comment">//   debugger;</span></span><br><span class="line"><span class="comment">//   let arr = s.split('')</span></span><br><span class="line"><span class="comment">//   let obj = &#123;&#125;</span></span><br><span class="line"><span class="comment">//   for (let i = 0; i &lt; arr.length; i++) &#123;</span></span><br><span class="line"><span class="comment">//     if (!obj[arr[i]]) &#123;</span></span><br><span class="line"><span class="comment">//       obj[arr[i]] = 1</span></span><br><span class="line"><span class="comment">//     &#125; else &#123;</span></span><br><span class="line"><span class="comment">//       obj[arr[i]]++</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">//   let a = new Set(arr)</span></span><br><span class="line"><span class="comment">//   let newArr = Array.from(a)</span></span><br><span class="line"><span class="comment">//   for (let key in obj) &#123;</span></span><br><span class="line"><span class="comment">//     let ltr = newArr.shift()</span></span><br><span class="line"><span class="comment">//     if (obj[ltr] === 1) &#123;</span></span><br><span class="line"><span class="comment">//       return arr.indexOf(ltr)</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">//   return -1</span></span><br><span class="line"><span class="comment">// &#125;;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>super slow code..;;<br>8420ms</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// var firstUniqChar = function(s) &#123;</span></span><br><span class="line"><span class="comment">//     let arr = s.split('')</span></span><br><span class="line"><span class="comment">//     for (let i = 0; i &lt; arr.length; i++) &#123;</span></span><br><span class="line"><span class="comment">//       let newArr = arr.slice()</span></span><br><span class="line"><span class="comment">//       newArr.splice(i,1)</span></span><br><span class="line"><span class="comment">//       if (!newArr.includes(arr[i])) &#123;</span></span><br><span class="line"><span class="comment">//         let idx = arr.indexOf(arr[i])</span></span><br><span class="line"><span class="comment">//         return idx</span></span><br><span class="line"><span class="comment">//       &#125;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     return -1</span></span><br><span class="line"><span class="comment">// &#125;;</span></span><br></pre></td></tr></table></figure>
 
 
                 
