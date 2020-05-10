@@ -13,6 +13,12 @@
     
 
     
+        <meta name="description" content="problem below
+Number Complement
+
+This question is the same as 1009: https://leetcode.com/problems/complement-of-base-10-integer/
+Given a positive inte"/>
+    
 
     <!--Author-->
     
@@ -21,10 +27,16 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jinho&#39;s blog"/>
+        <meta property="og:title" content="LeetCode-476. Number Complement"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="problem below
+Number Complement
+
+This question is the same as 1009: https://leetcode.com/problems/complement-of-base-10-integer/
+Given a positive inte"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +44,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +63,7 @@
 
     <!-- Title -->
     
-    <title>page - algorithm - Jinho&#39;s blog</title>
+    <title>LeetCode-476. Number Complement - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -157,259 +169,101 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/rayi.jpg')">
+<header class="intro-header" style="background-image: url('/img/macbook.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#algorithm</h1>
+                <div class="post-heading">
+                    <h1>LeetCode-476. Number Complement</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-05-10
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/01/06/LeetCode-807-Max-Increase-to-Keep-City-Skyline/">
-        <h1 class="post-title archive">
-            LeetCode - 807. Max Increase to Keep City Skyline
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-06
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/01/05/LeetCode-771-Jewels-and-Stones/">
-        <h1 class="post-title archive">
-            LeetCode - 771.Jewels and Stones
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-05
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="476">
+<li>Number Complement</li>
+</ol>
+<p>This question is the same as 1009: <a href="https://leetcode.com/problems/complement-of-base-10-integer/" target="_blank" rel="noopener">https://leetcode.com/problems/complement-of-base-10-integer/</a></p>
+<pre><code>Given a positive integer num, output its complement number. The complement strategy is to flip the bits of its binary representation.
+
+Example 1:
+Input: num = 5
+Output: 2
+Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+Example 2:
+Input: num = 1
+Output: 0
+Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.
+
+Constraints:
+The given integer num is guaranteed to fit within the range of a 32-bit signed integer.
+num &gt;= 1
+You could assume no leading zero bit in the integer’s binary representation.</code></pre><h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; num</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> findComplement = <span class="function"><span class="keyword">function</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//need to convert num to binary number</span></span><br><span class="line">  <span class="comment">//flip binary number</span></span><br><span class="line">  <span class="comment">//convert filped number to decimal</span></span><br><span class="line">  <span class="comment">//done!</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> bNum = <span class="built_in">parseInt</span>(num).toString(<span class="number">2</span>).split(<span class="string">''</span>);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; bNum.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (bNum[i] == <span class="string">'1'</span>) &#123;</span><br><span class="line">      bNum[i] = <span class="string">'0'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      bNum[i] = <span class="string">'1'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">parseInt</span>(bNum.join(<span class="string">''</span>), <span class="number">2</span>);</span><br><span class="line">&#125;;</span><br><span class="line">findComplement(<span class="number">20161211</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 20161211</span></span><br><span class="line"><span class="comment">// Output</span></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// Expected</span></span><br><span class="line"><span class="comment">// 13393220</span></span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2020/01/04/LeetCode-344-Reverse-String/">
-        <h1 class="post-title archive">
-            LeetCode - 344.Reverse String
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-04
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/01/03/permutations/">
-        <h1 class="post-title archive">
-            permutations
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/03/practice-problems-level5/">
-        <h1 class="post-title archive">
-            practice-problems-level5
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/27/practice-problems-level4/">
-        <h1 class="post-title archive">
-            practice-problems-level4
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-27
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/23/practice-problems-level3/">
-        <h1 class="post-title archive">
-            practice-problems-level3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-23
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/18/practice-problems-level2/">
-        <h1 class="post-title archive">
-            practice-problems-level2
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-18
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/18/practice-problems-level1/">
-        <h1 class="post-title archive">
-            practice-problems-level1
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-18
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/18/practice-problems-level0/">
-        <h1 class="post-title archive">
-            practice-problems-level0
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-18
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/17/practice-problems6/">
-        <h1 class="post-title archive">
-            practice-problems6
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/17/practice-problems5/">
-        <h1 class="post-title archive">
-            practice-problems5
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/12/practice-problems4/">
-        <h1 class="post-title archive">
-            practice-problems4
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/09/practice-problems3/">
-        <h1 class="post-title archive">
-            practice-problems3
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-09
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/07/practice-problems2/">
-        <h1 class="post-title archive">
-            practice-problems2
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/12/06/practice-problems1/">
-        <h1 class="post-title archive">
-            practice-problems1
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-06
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/30/Codewars-Beginner-Series-3-Sum-of-Numbers/">
-        <h1 class="post-title archive">
-            Codewars - 'Beginner-Series-#3-Sum-of-Numbers'
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-30
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/tags/algorithm/page/5/">&larr;  Newer Posts</a></li>
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -497,7 +351,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
