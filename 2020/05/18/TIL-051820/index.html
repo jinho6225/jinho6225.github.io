@@ -13,6 +13,22 @@
     
 
     
+        <meta name="description" content="TIL - Today I Learned
+studied backend
+github repository
+
+MongoDB
+mongoose
+Koa
+JWT(jsonwebtoken) for signup/signin
+
+
+search algo
+
+linear search
+
+binary"/>
+    
 
     <!--Author-->
     
@@ -21,10 +37,26 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jinho&#39;s blog"/>
+        <meta property="og:title" content="TIL 051820"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="TIL - Today I Learned
+studied backend
+github repository
+
+MongoDB
+mongoose
+Koa
+JWT(jsonwebtoken) for signup/signin
+
+
+search algo
+
+linear search
+
+binary"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +64,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +83,7 @@
 
     <!-- Title -->
     
-    <title>Tree - Jinho&#39;s blog</title>
+    <title>TIL 051820 - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -157,62 +189,154 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/rayi.jpg')">
+<header class="intro-header" style="background-image: url('/img/macbook.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#Tree</h1>
+                <div class="post-heading">
+                    <h1>TIL 051820</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-05-18
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/TIL/">#TIL</a> <a href="/tags/Study/">#Study</a> <a href="/tags/Today-I-Learned/">#Today-I-Learned</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/TIL/">TIL</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/05/19/BFS-DFS/">
-        <h1 class="post-title archive">
-            BFS_DFS
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-05-19
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/04/28/Data-structures-Tree/">
-        <h1 class="post-title archive">
-            Data-structures-Tree
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-28
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="TIL-Today-I-Learned"><a href="#TIL-Today-I-Learned" class="headerlink" title="TIL - Today I Learned"></a>TIL - Today I Learned</h1><ul>
+<li><p>studied backend</p>
+<p><a href="https://github.com/jinho6225/backend-koa-mongoose" target="_blank" rel="noopener">github repository</a></p>
+<ul>
+<li>MongoDB</li>
+<li>mongoose</li>
+<li>Koa</li>
+<li>JWT(jsonwebtoken) for signup/signin</li>
 </ul>
+</li>
+<li><p>search algo</p>
+<ul>
+<li><p>linear search</p>
+</li>
+<li><p>binary search</p>
+</li>
+<li><p>BFS (breadthFirstSearch) - O(n)</p>
+<ul>
+<li><p>shortest path</p>
+</li>
+<li><p>closer nodes</p>
+</li>
+<li><p><em>more memory</em></p>
+</li>
+</ul>
+</li>
+<li><p>DFS (depthFirstSearch) - O(n)</p>
+<pre><code>          9
+      4       20
+    1   6   15  170
+InOder [1,4,6,9,15,20,170]
+PreOrder [9,4,1,6,20,15,170]
+PostOrder [1,6,4,15,170,20,9]</code></pre><ul>
+<li><p>preoder, inorder, postorder</p>
+<ul>
+<li>preoder (recreate tree)</li>
+</ul>
+</li>
+<li><p>less memory</p>
+</li>
+<li><p>Does Path Exist?</p>
+</li>
+<li><p><em>can get slow</em></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>//If you know a solution is not far from the root of the tree:
+BFS
+//If the tree is very deep and solutions are rare: 
+BFS (DFS will take long) // depends on memory concern
+//If the tree is very wide:
+DFS (BFS will need too much memory)
+//If solutions are frequent but located deep in the tree:
+DFS
+//Determining whether a path exists between two nodes:
+DFS
+//Finding the shortest path:
+BFS</code></pre><br>
+<hr>
+
+<h3 id="Solved-LeetCode-problems"><a href="#Solved-LeetCode-problems" class="headerlink" title="Solved LeetCode problems"></a>Solved LeetCode problems</h3><ul>
+<li>no 350. Intersection of Two Arrays II - again</li>
+<li>no 118. Pascal’s Triangle</li>
+</ul>
+<br>
+<hr>
+
+
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -300,7 +424,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
