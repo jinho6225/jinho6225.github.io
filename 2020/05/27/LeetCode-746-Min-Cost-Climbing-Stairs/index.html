@@ -13,6 +13,11 @@
     
 
     
+        <meta name="description" content="problem below
+Min Cost Climbing Stairs
+On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Once you pay the cost, y"/>
+    
 
     <!--Author-->
     
@@ -21,10 +26,15 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jinho&#39;s blog"/>
+        <meta property="og:title" content="LeetCode-746. Min Cost Climbing Stairs"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="problem below
+Min Cost Climbing Stairs
+On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Once you pay the cost, y"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +42,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +61,7 @@
 
     <!-- Title -->
     
-    <title>page - Archives - Jinho&#39;s blog</title>
+    <title>LeetCode-746. Min Cost Climbing Stairs - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -157,300 +167,100 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/rayi.jpg')">
+<header class="intro-header" style="background-image: url('/img/macbook.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>LeetCode-746. Min Cost Climbing Stairs</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-05-27
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/02/01/TIL-01272020-01312020/">
-        <h1 class="post-title archive">
-            TIL-01272020-01312020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-01
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/02/01/TIL-01252020/">
-        <h1 class="post-title archive">
-            TIL-01252020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-01
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="746">
+<li><p>Min Cost Climbing Stairs</p>
+<pre><code>On a staircase, the i-th step has some non-negative cost cost[i] assigned (0 indexed).
+Once you pay the cost, you can either climb one or two steps. You need to find minimum cost to reach the top of the floor, and you can either start from the step with index 0, or the step with index 1.
+Example 1:
+Input: cost = [10, 15, 20]
+Output: 15
+Explanation: Cheapest is start on cost[1], pay that cost and go to the top.
+Example 2:
+Input: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
+Output: 6
+Explanation: Cheapest is start on cost[0], and only step on 1s, skipping cost[3].
+Note:
+cost will have a length in the range [2, 1000].
+Every cost[i] will be an integer in the range [0, 999].</code></pre></li>
+</ol>
+<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; cost</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> minCostClimbingStairs = <span class="function"><span class="keyword">function</span> (<span class="params">cost</span>) </span>&#123;</span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">start could be index 0 or 1</span></span><br><span class="line"><span class="comment">need to check cost length and need to over that length then end</span></span><br><span class="line"><span class="comment">i could manipulate array</span></span><br><span class="line"><span class="comment">array each element will be implemented by result</span></span><br><span class="line"><span class="comment">cost = [1, 100, 2, 3, 3, 103, 4, 5, 104, 6]</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">  <span class="keyword">if</span> (cost.length === <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (cost.length === <span class="number">1</span>) <span class="keyword">return</span> cost[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">if</span> (cost.length === <span class="number">2</span>) <span class="keyword">return</span> <span class="built_in">Math</span>.max(cost[<span class="number">0</span>], cost[<span class="number">1</span>]);</span><br><span class="line">  <span class="keyword">if</span> (cost.length === <span class="number">3</span>) <span class="keyword">return</span> <span class="built_in">Math</span>.max(cost[<span class="number">0</span>] + cost[<span class="number">2</span>], cost[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (cost.length &gt; <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> min = <span class="built_in">Math</span>.min(cost[<span class="number">0</span>], cost[<span class="number">1</span>]);</span><br><span class="line">    cost[<span class="number">2</span>] = min + cost[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">3</span>; i &lt; cost.length; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (cost[i - <span class="number">2</span>] &lt; cost[i - <span class="number">1</span>]) &#123;</span><br><span class="line">        cost[i] += cost[i - <span class="number">2</span>];</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        cost[i] += cost[i - <span class="number">1</span>];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.min(cost[cost.length - <span class="number">2</span>], cost[cost.length - <span class="number">1</span>]);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2020/02/01/TIL-01222020-01242020/">
-        <h1 class="post-title archive">
-            TIL-01222020-01242020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-02-01
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/01/30/practice-problems-make-tree/">
-        <h1 class="post-title archive">
-            practice-problems-make tree
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/25/LeetCode-414-Third-Maximum-Number/">
-        <h1 class="post-title archive">
-            LeetCode - 414. Third Maximum Number
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-25
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/24/Codewars-Complementary-DNA/">
-        <h1 class="post-title archive">
-            Codewars - Complementary DNA
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-24
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/23/Codewars-Sum-of-Digits-Digital-Root/">
-        <h1 class="post-title archive">
-            Codewars - Sum of Digits / Digital Root
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-23
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/23/Codewars-Shortest-Word/">
-        <h1 class="post-title archive">
-            Codewars - Shortest Word
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-23
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/23/Codewars-Square-Every-Digit/">
-        <h1 class="post-title archive">
-            Codewars - Square Every Digit
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-23
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/22/Codewars-Exes-and-Ohs/">
-        <h1 class="post-title archive">
-            Codewars - Exes and Ohs
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-22
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/22/Codewars-Highest-and-Lowest/">
-        <h1 class="post-title archive">
-            Codewars - Highest and Lowest
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-22
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/22/practice-project-counter-transfer/">
-        <h1 class="post-title archive">
-            practice-project counter-transfer
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-22
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/22/practice-project-click-counter/">
-        <h1 class="post-title archive">
-            practice-project click-counter
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-22
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/21/TIL-01212020/">
-        <h1 class="post-title archive">
-            TIL-01212020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-21
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/20/TIL-01202020/">
-        <h1 class="post-title archive">
-            TIL-01202020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-20
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/19/TIL-01132020-01172020/">
-        <h1 class="post-title archive">
-            TIL-01132020~01172020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-19
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/19/TIL-01062020-01102020/">
-        <h1 class="post-title archive">
-            TIL-01062020~01102020
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-19
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/17/practice-project-circle-tracing/">
-        <h1 class="post-title archive">
-            practice-project circle-tracing
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/17/recursionPractice-reverseString/">
-        <h1 class="post-title archive">
-            recursionPractice - reverseString
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/16/LeetCode-1221-Split-a-String-in-Balanced-Strings/">
-        <h1 class="post-title archive">
-            LeetCode - 1221. Split a String in Balanced Strings
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-16
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/archives/page/8/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/archives/page/10/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -538,7 +348,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
