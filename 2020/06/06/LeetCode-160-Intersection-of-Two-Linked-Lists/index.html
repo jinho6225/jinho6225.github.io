@@ -14,8 +14,9 @@
 
     
         <meta name="description" content="problem below
-Range Sum of BST
-Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusiv"/>
+Intersection of Two Linked Lists
+Write a program to find the node at which the intersection of two singly linked lists begins.
+For examp"/>
     
 
     <!--Author-->
@@ -25,14 +26,15 @@ Given the root node of a binary search tree, return the sum of values of all nod
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="LeetCode-938. Range Sum of BST"/>
+        <meta property="og:title" content="LeetCode-160. Intersection of Two Linked Lists"/>
     
 
     <!--Open Graph Description-->
     
         <meta property="og:description" content="problem below
-Range Sum of BST
-Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusiv"/>
+Intersection of Two Linked Lists
+Write a program to find the node at which the intersection of two singly linked lists begins.
+For examp"/>
     
 
     <!--Open Graph Site Name-->
@@ -59,7 +61,7 @@ Given the root node of a binary search tree, return the sum of values of all nod
 
     <!-- Title -->
     
-    <title>LeetCode-938. Range Sum of BST - Jinho&#39;s blog</title>
+    <title>LeetCode-160. Intersection of Two Linked Lists - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -173,13 +175,13 @@ Given the root node of a binary search tree, return the sum of values of all nod
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>LeetCode-938. Range Sum of BST</h1>
+                    <h1>LeetCode-160. Intersection of Two Linked Lists</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2020-04-27
+                            2020-06-06
                         
                     </span>
                 </div>
@@ -200,7 +202,7 @@ Given the root node of a binary search tree, return the sum of values of all nod
                         
 
 
-<a href="/tags/binary-search-tree/">#binary-search-tree</a> <a href="/tags/BST/">#BST</a> <a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
 
 
                     
@@ -220,23 +222,36 @@ Given the root node of a binary search tree, return the sum of values of all nod
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="938">
-<li><p>Range Sum of BST</p>
-<pre><code>Given the root node of a binary search tree, return the sum of values of all nodes with value between L and R (inclusive).
-The binary search tree is guaranteed to have unique values.
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="160">
+<li><p>Intersection of Two Linked Lists</p>
+<pre><code>Write a program to find the node at which the intersection of two singly linked lists begins.
+For example, the following two linked lists:
+begin to intersect at node c1.
 
 Example 1:
-Input: root = [10,5,15,3,7,null,18], L = 7, R = 15
-Output: 32
+Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
+Output: Reference of the node with value = 8
+Input Explanation: The intersected node&apos;s value is 8 (note that this must not be 0 if the two lists intersect). From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,0,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
 Example 2:
-Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10
-Output: 23
+Input: intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
+Output: Reference of the node with value = 2
+Input Explanation: The intersected node&apos;s value is 2 (note that this must not be 0 if the two lists intersect). From the head of A, it reads as [0,9,1,2,4]. From the head of B, it reads as [3,2,4]. There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.
+Example 3:
+Input: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
+Output: null
+Input Explanation: From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
+Explanation: The two lists do not intersect, so return null.
 
-Note:
-The number of nodes in the tree is at most 10000.
-The final answer is guaranteed to be less than 2^31.</code></pre></li>
+Notes:
+If the two linked lists have no intersection at all, return null.
+The linked lists must retain their original structure after the function returns.
+You may assume there are no cycles anywhere in the entire linked structure.
+Your code should preferably run in O(n) time and use only O(1) memory.</code></pre></li>
 </ol>
-<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; L</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; R</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Runtime: 136 ms, faster than 99.82% of JavaScript online submissions for Range Sum of BST.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> rangeSumBST = <span class="function"><span class="keyword">function</span> (<span class="params">root, L, R</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (!root.left &amp;&amp; !root.right) &#123;</span><br><span class="line">    <span class="keyword">if</span> (root.val &gt;= L &amp;&amp; root.val &lt;= R) &#123;</span><br><span class="line">      sum += root.val;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    sum = sum + rangeSumBST(root.left, L, R);</span><br><span class="line">    sum = sum + rangeSumBST(root.right, L, R);</span><br><span class="line">    <span class="keyword">if</span> (root.val &gt;= L &amp;&amp; root.val &lt;= R) &#123;</span><br><span class="line">      sum += root.val;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">  val: <span class="number">10</span>,</span><br><span class="line">  left: &#123;</span><br><span class="line">    val: <span class="number">5</span>,</span><br><span class="line">    left: &#123;</span><br><span class="line">      val: <span class="number">3</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    right: &#123;</span><br><span class="line">      val: <span class="number">7</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  right: &#123;</span><br><span class="line">    val: <span class="number">15</span>,</span><br><span class="line">    left: <span class="literal">null</span>,</span><br><span class="line">    right: &#123;</span><br><span class="line">      val: <span class="number">18</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">rangeSumBST(root, <span class="number">7</span>, <span class="number">15</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="my-code-below"><a href="#my-code-below" class="headerlink" title="my code below"></a>my code below</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="function"><span class="keyword">function</span> (<span class="params">headA, headB</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//headA + headB = [4,1,8,4,5][5,0,1,//8,4,5]</span></span><br><span class="line">  <span class="comment">//headB + headA = [5,0,1,8,4,5][4,1,//8,4,5]</span></span><br><span class="line">  <span class="keyword">let</span> curA = headA,</span><br><span class="line">    curB = headB;</span><br><span class="line">  <span class="keyword">while</span> (curA !== curB) &#123;</span><br><span class="line">    <span class="keyword">if</span> (curA === <span class="literal">null</span>) &#123;</span><br><span class="line">      curA = headB;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      curA = curA.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (curB === <span class="literal">null</span>) &#123;</span><br><span class="line">      curB = headA;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      curB = curB.next;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> curA;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">headA</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;ListNode&#125;</span> <span class="variable">headB</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;ListNode&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="function"><span class="keyword">function</span> (<span class="params">headA, headB</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> arr = [];</span><br><span class="line">  <span class="keyword">while</span> (headA) &#123;</span><br><span class="line">    arr.push(headA);</span><br><span class="line">    headA = headA.next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (headB) &#123;</span><br><span class="line">    <span class="keyword">if</span> (arr.includes(headB)) <span class="keyword">return</span> headB;</span><br><span class="line">    headB = headB.next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="function"><span class="keyword">function</span> (<span class="params">headA, headB</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">  <span class="keyword">while</span> (headA) &#123;</span><br><span class="line">    map.set(headA, <span class="number">1</span>);</span><br><span class="line">    headA = headA.next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (headB) &#123;</span><br><span class="line">    <span class="keyword">if</span> (map.get(headB) === <span class="number">1</span>) <span class="keyword">return</span> headB;</span><br><span class="line">    headB = headB.next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
