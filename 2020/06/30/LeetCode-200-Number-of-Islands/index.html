@@ -13,6 +13,12 @@
     
 
     
+        <meta name="description" content="problem below
+Number of Islands
+Medium
+
+Given a 2d grid map of &amp;apos;1&amp;apos;s (land) and &amp;apos;0&amp;apos;s (water), count the number of islands. An islan"/>
+    
 
     <!--Author-->
     
@@ -21,10 +27,16 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jinho&#39;s blog"/>
+        <meta property="og:title" content="LeetCode-200. Number of Islands "/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="problem below
+Number of Islands
+Medium
+
+Given a 2d grid map of &amp;apos;1&amp;apos;s (land) and &amp;apos;0&amp;apos;s (water), count the number of islands. An islan"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +44,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +63,7 @@
 
     <!-- Title -->
     
-    <title>page - algorithm - Jinho&#39;s blog</title>
+    <title>LeetCode-200. Number of Islands  - Jinho&#39;s blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -157,300 +169,105 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('/img/rayi.jpg')">
+<header class="intro-header" style="background-image: url('/img/macbook.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#algorithm</h1>
+                <div class="post-heading">
+                    <h1>LeetCode-200. Number of Islands </h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-06-30
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/algorithm/">#algorithm</a> <a href="/tags/practice-problems/">#practice-problems</a> <a href="/tags/leetcode/">#leetcode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/01/22/Codewars-Highest-and-Lowest/">
-        <h1 class="post-title archive">
-            Codewars - Highest and Lowest
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-22
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/01/22/practice-project-counter-transfer/">
-        <h1 class="post-title archive">
-            practice-project counter-transfer
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-22
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2 id="problem-below"><a href="#problem-below" class="headerlink" title="problem below"></a>problem below</h2><ol start="200">
+<li><p>Number of Islands</p>
+<pre><code>Medium
+
+Given a 2d grid map of &apos;1&apos;s (land) and &apos;0&apos;s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+
+Example 1:
+Input:
+11110
+11010
+11000
+00000
+Output: 1
+Example 2:
+Input:
+11000
+11000
+00100
+00011
+Output: 3</code></pre></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * @param &#123;character[][]&#125; grid</span><br><span class="line"> * @return &#123;number&#125;</span><br><span class="line"> *&#x2F;</span><br><span class="line">var numIslands &#x3D; function (grid) &#123;</span><br><span class="line">  let count &#x3D; 0;</span><br><span class="line">  function helper(arr, i, j, H, V) &#123;</span><br><span class="line">    if (i &lt; 0 || j &lt; 0 || i &#x3D;&#x3D;&#x3D; H || j &#x3D;&#x3D;&#x3D; V) return;</span><br><span class="line">    if (arr[i][j] &#x3D;&#x3D;&#x3D; &#39;0&#39;) return;</span><br><span class="line">    if (arr[i][j] &#x3D;&#x3D;&#x3D; &#39;1&#39;) &#123;</span><br><span class="line">      arr[i][j] &#x3D; &#39;0&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">    helper(arr, i - 1, j, H, V);</span><br><span class="line">    helper(arr, i + 1, j, H, V);</span><br><span class="line">    helper(arr, i, j - 1, H, V);</span><br><span class="line">    helper(arr, i, j + 1, H, V);</span><br><span class="line">  &#125;</span><br><span class="line">  let rowLen &#x3D; grid.length;</span><br><span class="line">  for (let i &#x3D; 0; i &lt; grid.length; i++) &#123;</span><br><span class="line">    let colLen &#x3D; grid[i].length;</span><br><span class="line">    for (let j &#x3D; 0; j &lt; grid[i].length; j++) &#123;</span><br><span class="line">      if (grid[i][j] &#x3D;&#x3D;&#x3D; &#39;1&#39;) &#123;</span><br><span class="line">        count++;</span><br><span class="line">        helper(grid, i, j, rowLen, colLen);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return count;</span><br></pre></td></tr></table></figure>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2020/01/22/practice-project-click-counter/">
-        <h1 class="post-title archive">
-            practice-project click-counter
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-22
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+    <h3>Comments:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2020/01/17/practice-project-circle-tracing/">
-        <h1 class="post-title archive">
-            practice-project circle-tracing
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/17/recursionPractice-reverseString/">
-        <h1 class="post-title archive">
-            recursionPractice - reverseString
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/16/LeetCode-1221-Split-a-String-in-Balanced-Strings/">
-        <h1 class="post-title archive">
-            LeetCode - 1221. Split a String in Balanced Strings
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-16
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/15/LeetCode-1313-Decompress-Run-Length-Encoded-List/">
-        <h1 class="post-title archive">
-            LeetCode - 1313. Decompress Run-Length Encoded List
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-15
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/12/Codewars-Mumbling/">
-        <h1 class="post-title archive">
-            Codewars - Mumbling
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/11/Codewars-You-are-a-square/">
-        <h1 class="post-title archive">
-            Codewars - You are a square
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-11
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/10/Codewars-Get-the-Middle-Character/">
-        <h1 class="post-title archive">
-            Codewars - Get the Middle Character
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-10
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/10/LeetCode-1295-Find-Numbers-with-Even-Number-of-Digits/">
-        <h1 class="post-title archive">
-            LeetCode - 1295. Find Numbers with Even Number of Digits 
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-10
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/09/Codewars-Find-the-odd-int/">
-        <h1 class="post-title archive">
-            Codewars - Find the odd int
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-09
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/09/LeetCode-1282-Group-the-People-Given-the-Group-Size-They-Belong-To/">
-        <h1 class="post-title archive">
-            LeetCode - 1282. Group the People Given the Group Size They Belong To
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-09
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/08/Codewars-Disemvowel-Trolls/">
-        <h1 class="post-title archive">
-            Codewars - Disemvowel Trolls
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/08/LeetCode-1281-Subtract-the-Product-and-Sum-of-Digits-of-an-Integer/">
-        <h1 class="post-title archive">
-            LeetCode - 1281. Subtract the Product and Sum of Digits of an Integer
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/07/LeetCode-1108-Defanging-an-IP-Address/">
-        <h1 class="post-title archive">
-            LeetCode - 1108. Defanging an IP Address
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/06/LeetCode-807-Max-Increase-to-Keep-City-Skyline/">
-        <h1 class="post-title archive">
-            LeetCode - 807. Max Increase to Keep City Skyline
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-06
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/05/LeetCode-771-Jewels-and-Stones/">
-        <h1 class="post-title archive">
-            LeetCode - 771.Jewels and Stones
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/04/LeetCode-344-Reverse-String/">
-        <h1 class="post-title archive">
-            LeetCode - 344.Reverse String
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2020/01/03/permutations/">
-        <h1 class="post-title archive">
-            permutations
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-01-03
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/tags/algorithm/page/7/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/tags/algorithm/page/9/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -538,7 +355,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
